@@ -4,7 +4,7 @@ I had published it here:https://xdaforums.com/t/xposed-battery-shutdown-manager.
 
 In brief, this module is to replace the old Xposed Battery Shutdown Manager: when battery reaches 5% it will set battery on charging even if no cable is connected freezing the battery state, then when you will connect the charger you can press the battery reset shortcut to bring battery state to normal.
 
-To set it up, import "Battery_Shutdown_Manager.macro" and "Battery_reset.macro" into Macrodroid and enable the root execution for the script, then create a shortcut to the home screen for the Battery_reset.macro. in case like me your rom refuss to run the Battery_Shutdown_Manager.macro command from inside the macro you can instead import the "Battery_Shutdown_Manager_DerpFest.macro" which executes a script in /data/local/tmp with the command, to setup this script:
+To set it up, import "Battery_Shutdown_Manager.macro" and "Battery_reset.macro" into Macrodroid, then create a shortcut to the home screen for the Battery_reset.macro. In case like me your rom refuss to run the Battery_Shutdown_Manager.macro command from inside the macro you can instead import the "Battery_Shutdown_Manager_DerpFest.macro" which executes a script in /data/local/tmp with the command, to setup this script:
 
 adb push batteryshutdown.sh /data/local/tmp
 
