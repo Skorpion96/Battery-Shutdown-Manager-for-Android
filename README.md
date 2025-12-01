@@ -8,16 +8,6 @@ To set it up, import "Battery_Shutdown_Manager.macro" and "Battery_reset.macro" 
 
 adb push batteryshutdown.sh /data/local/tmp
 
-adb shell
+adb shell su -c 'chmod +x /data/local/tmp/batteryshutdown.sh'
 
-su
-
-cd /data/local/tmp
-
-chown root:root batteryshutdown.sh
-
-chmod 777 batteryshutdown.sh
-
-chmod +s batteryshutdown.sh
-
-this will give the script the maximum power possible, while it may not be necessary i would do it, technically just "chown root:root batteryshutdown.sh && chmod +x batteryshutdown.sh" should do the trick but if you want to unlock the script max power i gave you a way.
+Also there is a no root version for tasker which uses shizuku (adb), for the battery reset task you can create a shortcut on the home launcher from tasker (as the macrodroid one) and run it when you need to connect the charger.
