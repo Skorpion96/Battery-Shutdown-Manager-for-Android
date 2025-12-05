@@ -9,3 +9,5 @@ To set it up, import "Battery_Shutdown_Manager.macro" and "Battery_reset.macro" 
 adb push batteryshutdown.sh /data/local/tmp
 
 adb shell su -c 'chmod +x /data/local/tmp/batteryshutdown.sh'
+
+Also there is a no root version which uses shizuku (adb), for the battery reset task, you can create a shortcut on the home launcher and run it when you need to connect the charger.
